@@ -8,16 +8,16 @@ public class Solution {
         num=1;
         deep(root);
 
-        return num;
+        return num-1;
     }
 
     public static int deep(TreeNode root){
         if (root==null) return 0;
         int left=deep(root.left);
         int right=deep(root.right);
-        num=Math.max(num,left+right);
+        num=Math.max(num,left+right+1);
 
-        return Math.max(left,right);
+                return Math.max(left,right)+1;
     }
 
     public static void main(String[] args){
